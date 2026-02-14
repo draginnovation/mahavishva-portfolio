@@ -40,7 +40,8 @@ export const portfolioData = {
         twitter: "https://x.com/Mahavishva23",
         whatsapp: "https://wa.me/919655304812",
         phone: "9655304812",
-        email: "mahavishva@example.com"
+        email: "mahavishva@example.com",
+        location: "Kalavasal, Rajapalayam, Tamil Nadu, India"
     },
 
     timeline: [

@@ -47,7 +47,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-xs text-industrial-silver uppercase tracking-widest mb-1 font-bold">Base Location</h4>
-                                    <p className="text-white font-technical">kalavasal,Rajapalayam,Tamil Nadu,  India</p>
+                                    <p className="text-white font-technical">{portfolioData.social.location}</p>
                                 </div>
                             </div>
                         </div>
