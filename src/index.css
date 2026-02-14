@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* Safety background to verify CSS is loading */
+html,
+body {
+  background-color: #1a1a1a !important;
+  color: white !important;
+}
+
+@theme {
+  --color-industrial-gray: #1a1a1a;
+  --color-industrial-metal: #2d2d2d;
+  --color-industrial-silver: #a0a0a0;
+  --color-industrial-accent: #3b82f6;
+  /* Electric Blue */
+  --color-industrial-warning: #f97316;
+  /* Safety Orange */
+
+  --font-technical: "Inter", "Roboto Mono", monospace;
+
+  --shadow-metallic: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+:root {
+  font-family: var(--font-technical);
+  background-color: var(--color-industrial-gray);
+  color: #ffffff;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-industrial-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-industrial-metal);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-industrial-accent);
+}
