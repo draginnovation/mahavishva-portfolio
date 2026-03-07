@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Trophy, Star, ShieldCheck } from 'lucide-react';
+import { Award, Trophy, Star, ShieldCheck, FileText } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 const getFileUrl = (path) => {
@@ -56,15 +56,22 @@ const Achievements = () => {
                             ) : null}
 
                             {item.type === 'pdf' && item.file ? (
-                                <div className="mb-6 relative w-full h-48 overflow-hidden rounded border border-white/10 group-hover:border-industrial-accent/50 transition-colors bg-white flex items-center justify-center">
-                                    {/* Using an iframe to render the PDF natively with scrollbars hidden via URL parameters */}
+                                <div className="mb-6 relative w-full h-48 overflow-hidden rounded border border-white/10 group-hover:border-industrial-accent/50 transition-colors bg-white flex items-center justify-center relative">
+                                    
+                                    {/* Mobile Fallback View (Visible only on small screens) */}
+                                    <div className="absolute inset-0 bg-industrial-black/90 flex flex-col items-center justify-center md:hidden z-20">
+                                         <FileText className="text-industrial-accent size-12 mb-3 opacity-80" />
+                                         <span className="text-industrial-silver text-[10px] font-technical uppercase tracking-widest text-center px-4">Tap Below to View Document</span>
+                                    </div>
+
+                                    {/* Desktop Iframe View (Hidden on mobile) */}
                                     <iframe 
                                         src={`${getFileUrl(item.file)}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} 
-                                        className="w-[110%] h-[150%] scale-[0.85] origin-top pointer-events-none absolute top-0"
+                                        className="hidden md:block w-[110%] h-[150%] scale-[0.85] origin-top pointer-events-none absolute top-0"
                                         title={item.title}
                                     />
                                     {/* Transparent overlay to block mouse events inside the iframe and prevent scrolling */}
-                                    <div className="absolute inset-0 bg-transparent z-10"></div>
+                                    <div className="hidden md:block absolute inset-0 bg-transparent z-10"></div>
                                 </div>
                             ) : null}
 
