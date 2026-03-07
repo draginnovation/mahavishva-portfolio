@@ -3,6 +3,12 @@ import { motion } from 'framer-motion';
 import { Award, Trophy, Star, ShieldCheck } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
+const getFileUrl = (path) => {
+    if (!path) return '';
+    const baseUrl = import.meta.env.BASE_URL;
+    return path.startsWith('/') ? `${baseUrl}${path.substring(1)}` : `${baseUrl}${path}`;
+};
+
 const Achievements = () => {
     return (
         <section id="achievements" className="py-24 bg-industrial-gray relative overflow-hidden">
@@ -17,7 +23,7 @@ const Achievements = () => {
                     <div className="w-24 h-1 bg-industrial-accent mx-auto"></div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
                     {portfolioData.achievements.map((item, index) => (
                         <motion.div
                             key={index}
@@ -25,10 +31,10 @@ const Achievements = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-industrial-metal p-8 border border-white/5 rounded-sm relative group hover:border-industrial-accent/40 transition-all duration-500"
+                            className="bg-industrial-metal p-6 md:p-8 border border-white/5 rounded-sm relative group hover:border-industrial-accent/40 transition-all duration-500"
                         >
                             <div className="absolute top-4 right-4 text-industrial-accent opacity-20 group-hover:opacity-100 group-hover:rotate-12 transition-all duration-500">
-                                {index === 0 ? <Trophy size={40} /> : index === 1 ? <ShieldCheck size={40} /> : <Award size={40} />}
+                                {item.type === 'pdf' ? <Trophy className="size-8 md:size-10" /> : <Award className="size-8 md:size-10" />}
                             </div>
 
                             <div className="flex items-center gap-2 mb-6 text-industrial-accent font-technical text-xs font-bold uppercase tracking-widest">
@@ -36,16 +42,59 @@ const Achievements = () => {
                                 <span>{item.date}</span>
                             </div>
 
-                            <h3 className="text-xl font-bold text-white mb-2 uppercase tracking-wider group-hover:text-industrial-accent transition-colors">
+                            <h3 className="text-lg md:text-xl font-bold text-white mb-2 uppercase tracking-wider group-hover:text-industrial-accent transition-colors line-clamp-2">
                                 {item.title}
                             </h3>
-                            <h4 className="text-industrial-silver text-xs font-technical uppercase tracking-widest mb-6 opacity-70">
+                            <h4 className="text-industrial-silver text-[10px] md:text-xs font-technical uppercase tracking-widest mb-4 opacity-70">
                                 {item.organization}
                             </h4>
 
-                            <p className="text-industrial-silver text-sm font-technical leading-relaxed">
+                            {item.type === 'image' && item.file ? (
+                                <div className="mb-6 relative w-full h-48 overflow-hidden rounded border border-white/10 group-hover:border-industrial-accent/50 transition-colors">
+                                    <img src={getFileUrl(item.file)} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                </div>
+                            ) : null}
+
+                            {item.type === 'pdf' && item.file ? (
+                                <div className="mb-6 relative w-full h-48 overflow-hidden rounded border border-white/10 group-hover:border-industrial-accent/50 transition-colors bg-white flex items-center justify-center">
+                                    {/* Using an iframe to render the PDF natively with scrollbars hidden via URL parameters */}
+                                    <iframe 
+                                        src={`${getFileUrl(item.file)}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} 
+                                        className="w-[110%] h-[150%] scale-[0.85] origin-top pointer-events-none absolute top-0"
+                                        title={item.title}
+                                    />
+                                    {/* Transparent overlay to block mouse events inside the iframe and prevent scrolling */}
+                                    <div className="absolute inset-0 bg-transparent z-10"></div>
+                                </div>
+                            ) : null}
+
+                            <p className="text-industrial-silver text-xs md:text-sm font-technical leading-relaxed mb-6 line-clamp-3">
                                 {item.description}
                             </p>
+
+                            {item.type === 'pdf' && item.file && (
+                                <a 
+                                    href={getFileUrl(item.file)} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-industrial-accent hover:text-white border border-industrial-accent hover:bg-industrial-accent/20 px-4 py-2 rounded text-xs font-bold uppercase tracking-widest transition-all mt-auto"
+                                >
+                                    <ShieldCheck size={16} />
+                                    View Certificate
+                                </a>
+                            )}
+                            
+                            {item.type === 'image' && item.file && (
+                                <a 
+                                    href={getFileUrl(item.file)} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-industrial-accent hover:text-white border border-industrial-accent hover:bg-industrial-accent/20 px-4 py-2 rounded text-xs font-bold uppercase tracking-widest transition-all mt-auto"
+                                >
+                                    <Star size={16} />
+                                    View Image
+                                </a>
+                            )}
 
                             {/* Decorative meter element */}
                             <div className="mt-8 flex gap-1">
@@ -58,15 +107,15 @@ const Achievements = () => {
                 </div>
 
                 {/* Industrial watermark link to Drive mentioned by user */}
-                <div className="mt-20 p-8 border border-industrial-accent/20 bg-industrial-accent/5 rounded-sm text-center">
-                    <p className="text-industrial-silver font-technical text-xs uppercase tracking-[0.2em] mb-4">
+                <div className="mt-20 p-6 md:p-8 border border-industrial-accent/20 bg-industrial-accent/5 rounded-sm text-center">
+                    <p className="text-industrial-silver font-technical text-[10px] md:text-xs uppercase tracking-[0.2em] mb-4 px-4">
                         Data Synchronized with Master Repository
                     </p>
                     <a
                         href="https://drive.google.com/drive/folders/1esXzRqO23MPourATKbBQH_LoISoDaUXX"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 text-industrial-accent hover:text-white transition-colors font-bold uppercase tracking-[0.3em] text-[10px]"
+                        className="inline-flex items-center gap-3 text-industrial-accent hover:text-white transition-colors font-bold uppercase tracking-[0.3em] text-[9px] md:text-[10px]"
                     >
                         <ShieldCheck size={16} />
                         Access Full Credentials Vault

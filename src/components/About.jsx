@@ -48,12 +48,12 @@ const About = () => {
                         <div className="aspect-square bg-industrial-gray rounded-sm border border-industrial-accent/20 flex items-center justify-center group overflow-hidden">
                             {/* This would be an engineering schematic or a photo of the student */}
                             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700"></div>
-                            <div className="relative z-10 p-12 text-center">
-                                <div className="w-24 h-24 mx-auto mb-6 border-2 border-industrial-accent rounded-full flex items-center justify-center">
-                                    <Box size={40} className="text-industrial-accent animate-pulse" />
+                            <div className="relative z-10 p-6 md:p-12 text-center">
+                                <div className="w-16 h-16 md:w-24 md:h-24 mx-auto mb-6 border-2 border-industrial-accent rounded-full flex items-center justify-center">
+                                    <Box size={30} className="md:size-[40px] text-industrial-accent animate-pulse" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-2 uppercase tracking-widest font-technical">Module: Mahavishva</h3>
-                                <p className="text-industrial-accent text-sm font-technical uppercase tracking-widest font-bold">Status: Online / Pre-final</p>
+                                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 uppercase tracking-widest font-technical">Module: Mahavishva S</h3>
+                                <p className="text-industrial-accent text-xs md:text-sm font-technical uppercase tracking-widest font-bold">Status: Online / Pre-final</p>
                             </div>
 
                             {/* Decorative corners */}

@@ -57,16 +57,16 @@ const Contact = () => {
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="p-10 bg-industrial-metal border border-white/5 rounded-sm shadow-2xl"
+                        className="p-6 md:p-10 bg-industrial-metal border border-white/5 rounded-sm shadow-2xl"
                     >
-                        <form className="space-y-6">
-                            <div className="grid md:grid-cols-2 gap-6">
+                        <form className="space-y-4 md:space-y-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                                 <div className="space-y-2">
                                     <label className="text-[10px] text-industrial-silver uppercase tracking-widest font-bold">Identification</label>
                                     <input
                                         type="text"
                                         placeholder="ENTER NAME"
-                                        className="w-full bg-industrial-gray border border-white/10 rounded-sm px-4 py-3 text-white focus:border-industrial-accent outline-none font-technical placeholder:text-white/20"
+                                        className="w-full bg-industrial-gray border border-white/10 rounded-sm px-4 py-3 text-white focus:border-industrial-accent outline-none font-technical placeholder:text-white/20 text-sm"
                                     />
                                 </div>
                                 <div className="space-y-2">
@@ -74,7 +74,7 @@ const Contact = () => {
                                     <input
                                         type="email"
                                         placeholder="ENTER EMAIL"
-                                        className="w-full bg-industrial-gray border border-white/10 rounded-sm px-4 py-3 text-white focus:border-industrial-accent outline-none font-technical placeholder:text-white/20"
+                                        className="w-full bg-industrial-gray border border-white/10 rounded-sm px-4 py-3 text-white focus:border-industrial-accent outline-none font-technical placeholder:text-white/20 text-sm"
                                     />
                                 </div>
                             </div>
@@ -84,14 +84,14 @@ const Contact = () => {
                                 <textarea
                                     rows="4"
                                     placeholder="ENTER PROJECT DETAILS..."
-                                    className="w-full bg-industrial-gray border border-white/10 rounded-sm px-4 py-3 text-white focus:border-industrial-accent outline-none font-technical placeholder:text-white/20 resize-none"
+                                    className="w-full bg-industrial-gray border border-white/10 rounded-sm px-4 py-3 text-white focus:border-industrial-accent outline-none font-technical placeholder:text-white/20 resize-none text-sm"
                                 ></textarea>
                             </div>
 
                             <motion.button
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="w-full py-4 bg-industrial-accent text-white font-bold rounded-sm shadow-glow flex items-center justify-center gap-3 uppercase tracking-widest text-sm"
+                                className="w-full py-4 bg-industrial-accent text-white font-bold rounded-sm shadow-glow flex items-center justify-center gap-3 uppercase tracking-widest text-xs md:text-sm"
                             >
                                 Transmit Message
                                 <Send size={18} />

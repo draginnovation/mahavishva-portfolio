@@ -21,7 +21,7 @@ const Skills = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="p-8 bg-industrial-metal border border-white/5 rounded-sm hover:border-industrial-accent/50 transition-all group"
+                            className="p-6 md:p-8 bg-industrial-metal border border-white/5 rounded-sm hover:border-industrial-accent/50 transition-all group"
                         >
                             <div className="flex justify-between items-end mb-4">
                                 <span className="text-sm text-industrial-accent font-technical uppercase tracking-widest font-bold">{skill.category}</span>

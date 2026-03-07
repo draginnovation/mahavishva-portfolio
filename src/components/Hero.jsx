@@ -39,20 +39,12 @@ const Hero = () => {
                         <span>Pre-Final Year Mechanical Student</span>
                     </div>
 
-                    <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 text-white tracking-tighter">
-                        {portfolioData.name.split('').map((char, i) => (
-                            <motion.span
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.1 * i, duration: 0.5 }}
-                            >
-                                {char}
-                            </motion.span>
-                        ))}
+                    <h1 className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-3xl sm:text-6xl md:text-8xl font-bold mb-6 text-white tracking-tighter px-2">
+                        <span className="whitespace-nowrap">Mahavishva</span>
+                        <span className="text-industrial-accent whitespace-nowrap">S</span>
                     </h1>
 
-                    <p className="text-lg md:text-2xl text-industrial-silver max-w-2xl mx-auto mb-10 font-technical leading-relaxed px-4">
+                    <p className="text-base md:text-2xl text-industrial-silver max-w-2xl mx-auto mb-10 font-technical leading-relaxed px-6">
                         {portfolioData.specialization}
                     </p>
 

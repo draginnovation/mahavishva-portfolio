@@ -46,17 +46,17 @@ const Projects = () => {
                                 </div>
                             </div>
 
-                            <div className="p-8 flex-1 flex flex-col">
-                                <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wider group-hover:text-industrial-warning transition-colors line-clamp-1">
+                            <div className="p-6 md:p-8 flex-1 flex flex-col">
+                                <h3 className="text-lg md:text-xl font-bold text-white mb-4 uppercase tracking-wider group-hover:text-industrial-warning transition-colors line-clamp-1">
                                     {project.title}
                                 </h3>
-                                <p className="text-industrial-silver text-sm mb-8 line-clamp-3 font-technical leading-relaxed">
+                                <p className="text-industrial-silver text-xs md:text-sm mb-8 line-clamp-3 font-technical leading-relaxed">
                                     {project.description}
                                 </p>
                                 <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
                                     <div className="flex gap-2">
                                         {project.tech.slice(0, 2).map((tag, i) => (
-                                            <span key={i} className="px-2 py-1 text-[10px] bg-white/5 text-industrial-silver rounded-sm uppercase tracking-widest border border-white/5">
+                                            <span key={i} className="px-2 py-1 text-[9px] md:text-[10px] bg-white/5 text-industrial-silver rounded-sm uppercase tracking-widest border border-white/5">
                                                 {tag}
                                             </span>
                                         ))}
@@ -66,7 +66,7 @@ const Projects = () => {
                                         whileHover={{ x: 5 }}
                                         className="text-industrial-warning hover:text-white transition-colors"
                                     >
-                                        <ExternalLink size={20} />
+                                        <ExternalLink size={18} className="md:size-5" />
                                     </motion.a>
                                 </div>
                             </div>

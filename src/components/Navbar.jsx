@@ -37,7 +37,7 @@ const Navbar = () => {
                     >
                         <Settings size={28} strokeWidth={1.5} />
                     </motion.div>
-                    <span className="text-lg md:text-xl font-bold text-white tracking-widest uppercase font-technical">
+                    <span className="text-[12px] xs:text-sm sm:text-lg md:text-xl font-bold text-white tracking-normal sm:tracking-widest uppercase font-technical whitespace-nowrap shrink">
                         MAHAVISHVA S<span className="text-industrial-accent italic underline decoration-industrial-warning underline-offset-4">.EXE</span>
                     </span>
                 </motion.div>
@@ -87,7 +87,7 @@ const Navbar = () => {
                                 key={index}
                                 href={link.href}
                                 onClick={() => setIsOpen(false)}
-                                className="text-2xl font-bold text-white uppercase tracking-widest hover:text-industrial-accent transition-colors"
+                                className="text-xl sm:text-2xl font-bold text-white uppercase tracking-widest hover:text-industrial-accent transition-colors py-2"
                             >
                                 {link.name}
                             </a>

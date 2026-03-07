@@ -70,22 +70,132 @@ export const portfolioData = {
 
     achievements: [
         {
-            title: "National CAD Champion",
-            organization: "Automotive Engineers Society",
+            title: "Certified in Metal Additive Manufacturing",
+            organization: "NPTEL",
             date: "2024",
-            description: "Secured 1st place in a national level SolidWorks design challenge involving complex powertrain modeling."
+            description: "Completed comprehensive certification course in metal additive manufacturing.",
+            file: "/certificates/Certified in Metal Additive Manufacturing – NPTEL.pdf",
+            type: "pdf"
         },
         {
             title: "Certified SolidWorks Associate",
             organization: "Dassault Systèmes",
             date: "2023",
-            description: "Professional certification for mechanical design and assembly validation."
+            description: "Professional certification for mechanical design and assembly validation.",
+            file: "/certificates/SOLIDWORKS CERTIFICATION .pdf",
+            type: "pdf"
         },
         {
-            title: "Innovation Award: Eco-Purifier",
-            organization: "GreenTech Expo",
+            title: "Siemens NX CAD Certification",
+            organization: "Siemens",
             date: "2024",
-            description: "Received 'Best Sustainable Design' award for the solar-powered water purification prototype."
+            description: "Certification for mechanical design using Siemens NX CAD software.",
+            file: "/certificates/Siemens NX CAD Certification for Mechanical Design.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Technical Aptitude Achievement",
+            organization: "Mechanical Engineering Department",
+            date: "2024",
+            description: "Excellence in mechanical engineering technical aptitude.",
+            file: "/certificates/Technical Aptitude Achievement Certificate.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Workshop Certificate 1",
+            organization: "Tech Symposium",
+            date: "2023",
+            description: "Participated in advanced robotics and automation workshop.",
+            file: "/certificates/1-03149d29-e958-4c1d-90e2-57698348ab2d.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Workshop Certificate 2",
+            organization: "Engineering Fest",
+            date: "2023",
+            description: "Hands-on experience in thermal engineering systems.",
+            file: "/certificates/1-287a04aa-f500-4c81-b727-6777665b1514.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Workshop Certificate 3",
+            organization: "Industrial Design Council",
+            date: "2023",
+            description: "Training on latest industrial manufacturing processes.",
+            file: "/certificates/1-3ba54857-6b37-461a-929d-90be3ef5b02b.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Workshop Certificate 4",
+            organization: "TechFest",
+            date: "2023",
+            description: "Participated in embedded systems and IoT workshop.",
+            file: "/certificates/1-96c20324-6ca7-4b57-942e-cf408562ae35.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Workshop Certificate 5",
+            organization: "Robotics Club",
+            date: "2023",
+            description: "Advanced microcontroller programming seminar.",
+            file: "/certificates/1-b5f80d09-2e30-485e-bd8b-65fdb2ef33ec.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Achievement Certificate 6",
+            organization: "University Competition",
+            date: "2024",
+            description: "Recognized for outstanding technical project presentation.",
+            file: "/certificates/WhatsApp Image 2026-02-14 at 19.09.36.jpeg",
+            type: "image"
+        },
+        {
+            title: "Achievement Certificate 7",
+            organization: "Engineering Symposium",
+            date: "2024",
+            description: "Awarded for excellence in academic projects.",
+            file: "/certificates/c2.jpeg",
+            type: "image"
+        },
+        {
+            title: "Achievement Certificate 8",
+            organization: "Tech Event Series",
+            date: "2024",
+            description: "Participation in series of technical events and seminars.",
+            file: "/certificates/c3.jpeg",
+            type: "image"
+        },
+        {
+            title: "Achievement Certificate 9",
+            organization: "Design Challenge",
+            date: "2024",
+            description: "Competed in mechanical component design challenge.",
+            file: "/certificates/c4.jpeg",
+            type: "image"
+        },
+        {
+            title: "Achievement Certificate 10",
+            organization: "Inter-college Fest",
+            date: "2024",
+            description: "Participated in inter-college innovation fest.",
+            file: "/certificates/c5.jpeg",
+            type: "image"
+        },
+        {
+            title: "Achievement Certificate 11",
+            organization: "Innovation Expo",
+            date: "2024",
+            description: "Showcased prototype at regional innovation expo.",
+            file: "/certificates/c6.jpeg",
+            type: "image"
+        },
+        {
+            title: "Achievement Certificate 12",
+            organization: "Technical Symposium",
+            date: "2024",
+            description: "Received participation certificate in technical symposium.",
+            file: "/certificates/c7.jpeg",
+            type: "image"
         }
     ]
 };
