@@ -6,7 +6,9 @@ import { portfolioData } from '../data/portfolioData';
 const getFileUrl = (path) => {
     if (!path) return '';
     const baseUrl = import.meta.env.BASE_URL;
-    return path.startsWith('/') ? `${baseUrl}${path.substring(1)}` : `${baseUrl}${path}`;
+    const cleanPath = path.startsWith('/') ? path.substring(1) : path;
+    // Standardize URL formatting and encode characters
+    return `${baseUrl}${encodeURI(cleanPath)}`;
 };
 
 const Achievements = () => {

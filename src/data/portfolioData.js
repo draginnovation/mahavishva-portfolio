@@ -74,7 +74,7 @@ export const portfolioData = {
             organization: "NPTEL",
             date: "2024",
             description: "Completed comprehensive certification course in metal additive manufacturing.",
-            file: "/certificates/Certified in Metal Additive Manufacturing – NPTEL.pdf",
+            file: "/certificates/NPTEL_Certificate.pdf",
             type: "pdf"
         },
         {
@@ -82,7 +82,7 @@ export const portfolioData = {
             organization: "Dassault Systèmes",
             date: "2023",
             description: "Professional certification for mechanical design and assembly validation.",
-            file: "/certificates/SOLIDWORKS CERTIFICATION .pdf",
+            file: "/certificates/SolidWorks_Certification.pdf",
             type: "pdf"
         },
         {
@@ -90,7 +90,7 @@ export const portfolioData = {
             organization: "Siemens",
             date: "2024",
             description: "Certification for mechanical design using Siemens NX CAD software.",
-            file: "/certificates/Siemens NX CAD Certification for Mechanical Design.pdf",
+            file: "/certificates/Siemens_NX_CAD.pdf",
             type: "pdf"
         },
         {
@@ -98,7 +98,7 @@ export const portfolioData = {
             organization: "Mechanical Engineering Department",
             date: "2024",
             description: "Excellence in mechanical engineering technical aptitude.",
-            file: "/certificates/Technical Aptitude Achievement Certificate.pdf",
+            file: "/certificates/Technical_Aptitude.pdf",
             type: "pdf"
         },
         {
@@ -146,7 +146,7 @@ export const portfolioData = {
             organization: "University Competition",
             date: "2024",
             description: "Recognized for outstanding technical project presentation.",
-            file: "/certificates/WhatsApp Image 2026-02-14 at 19.09.36.jpeg",
+            file: "/certificates/Achievement_6.jpeg",
             type: "image"
         },
         {

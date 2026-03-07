@@ -1,29 +1,33 @@
 const fs = require('fs');
 const path = require('path');
-const { fromPath } = require('pdf2pic');
+const poppler = require('pdf-poppler');
 
 const dir = path.join(__dirname, 'public', 'certificates');
 
-const options = {
-    density: 300,
-    saveFilename: "untitled",
-    savePath: dir,
-    format: "jpeg",
-    width: 2550,
-    height: 3300
-};
+async function convertPdfs() {
+    const files = fs.readdirSync(dir);
+    for (const file of files) {
+        if (path.extname(file).toLowerCase() === '.pdf') {
+            const filePath = path.join(dir, file);
+            const fileName = path.parse(file).name;
+            
+            const opts = {
+                format: 'jpeg',
+                out_dir: dir,
+                out_prefix: fileName,
+                page: 1,
+                scale: 1024
+            };
 
-fs.readdirSync(dir).forEach(file => {
-    if (path.extname(file).toLowerCase() === '.pdf') {
-        const filePath = path.join(dir, file);
-        const fileName = path.parse(file).name;
-        
-        options.saveFilename = fileName;
-        const storeAsImage = fromPath(filePath, options);
-        storeAsImage(1).then((resolve) => {
-            console.log("Successfully converted: " + resolve.name);
-        }).catch((err) => {
-            console.error("Failed to convert " + file + ":", err);
-        });
+            console.log(`Converting ${file}...`);
+            try {
+                await poppler.convert(filePath, opts);
+                console.log(`Success: ${file}`);
+            } catch (err) {
+                console.error(`Failed: ${file}`, err);
+            }
+        }
     }
-});
+}
+
+convertPdfs();
