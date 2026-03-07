@@ -34,7 +34,7 @@ export const portfolioData = {
     ],
 
     social: {
-        github: "https://github.com",
+        github: "https://github.com/smahavishva2006-code",
         linkedin: "https://www.linkedin.com/in/mahavishva-s-799460387/",
         instagram: "https://www.instagram.com/vishva__sm?igsh=MWF3dmd4eGV4MGl4OA%3D%3D",
         twitter: "https://x.com/Mahavishva23",
