@@ -50,8 +50,8 @@ const Achievements = () => {
                             </h4>
 
                             {item.type === 'image' && item.file ? (
-                                <div className="mb-6 relative w-full h-48 overflow-hidden rounded border border-white/10 group-hover:border-industrial-accent/50 transition-colors">
-                                    <img src={getFileUrl(item.file)} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <div className="mb-6 relative w-full h-48 overflow-hidden rounded border border-white/10 group-hover:border-industrial-accent/50 transition-colors bg-industrial-black/20">
+                                    <img src={getFileUrl(item.file)} alt={item.title} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                                 </div>
                             ) : null}
 
@@ -60,7 +60,7 @@ const Achievements = () => {
                                     <img 
                                         src={getFileUrl(item.file.replace('.pdf', '-1.jpg'))} 
                                         alt={`${item.title} Preview`} 
-                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
                                     />
                                 </div>
                             ) : null}
