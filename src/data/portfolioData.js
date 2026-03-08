@@ -15,18 +15,24 @@ export const portfolioData = {
     projects: [
         {
             title: "Autonomous Delivery Drone",
+            organization: "Engineering Design Lab",
+            date: "2024",
             description: "Designed a lightweight carbon-fiber frame for a delivery drone capable of carrying 2kg payloads with high stability.",
             tech: ["SolidWorks", "Aerodynamics", "3D Printing"],
             link: "#"
         },
         {
             title: "Solar-Powered Water Purifier",
+            organization: "Sustainability Workshop",
+            date: "2023",
             description: "Implemented a cost-effective thermal distillation system powered by concentrated solar energy for rural areas.",
             tech: ["Thermal Engineering", "Sustainability", "Materials Science"],
             link: "#"
         },
         {
             title: "Smart HVAC Controller",
+            organization: "IoT Innovation Hub",
+            date: "2024",
             description: "Developed an IoT-based system to optimize energy consumption in large-scale residential buildings.",
             tech: ["Embedded Systems", "Energy Audit", "Python"],
             link: "#"
@@ -40,7 +46,7 @@ export const portfolioData = {
         twitter: "https://x.com/Mahavishva23",
         whatsapp: "https://wa.me/919655304812",
         phone: "9655304812",
-        email: "mahavishva@example.com",
+        email: "s.mahavishva2006@gmail.com",
         location: "Kalavasal, Rajapalayam, Tamil Nadu, India"
     },
 
@@ -69,6 +75,14 @@ export const portfolioData = {
     ],
 
     achievements: [
+        {
+            title: "Hydraulic Scissor Lift Design",
+            organization: "Academic Project",
+            date: "2024",
+            description: "Detailed design and analysis of a hydraulic scissor lift mechanism.",
+            file: "/certificates/Hydraulic_Scissor_Lift.pdf",
+            type: "pdf"
+        },
         {
             title: "Certified in Metal Additive Manufacturing",
             organization: "NPTEL",

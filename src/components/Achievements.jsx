@@ -52,18 +52,26 @@ const Achievements = () => {
                             </h4>
 
                             {item.type === 'image' && item.file ? (
-                                <div className="mb-6 relative w-full h-48 overflow-hidden rounded border border-white/10 group-hover:border-industrial-accent/50 transition-colors bg-industrial-black/20">
-                                    <img src={getFileUrl(item.file)} alt={item.title} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                                <div className="mb-6 relative w-full h-56 overflow-hidden rounded border border-white/10 group-hover:border-industrial-accent/50 transition-colors bg-industrial-black/20 flex items-center justify-center">
+                                    <img 
+                                        src={getFileUrl(item.file)} 
+                                        alt={item.title} 
+                                        className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500" 
+                                    />
                                 </div>
                             ) : null}
 
                             {item.type === 'pdf' && item.file ? (
-                                <div className="mb-6 relative w-full h-48 overflow-hidden rounded border border-white/10 group-hover:border-industrial-accent/50 transition-colors bg-industrial-black flex items-center justify-center">
+                                <div className="mb-6 relative w-full h-56 overflow-hidden rounded border border-white/10 group-hover:border-industrial-accent/50 transition-colors bg-industrial-black flex items-center justify-center">
                                     <img 
                                         src={getFileUrl(item.file.replace('.pdf', '-1.jpg'))} 
                                         alt={`${item.title} Preview`} 
-                                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
+                                        className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500" 
                                     />
+                                    {/* Mobile indicator */}
+                                    <div className="absolute inset-0 bg-industrial-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity md:hidden">
+                                        <FileText className="text-industrial-accent" size={32} />
+                                    </div>
                                 </div>
                             ) : null}
 
