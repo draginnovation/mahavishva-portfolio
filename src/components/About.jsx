@@ -7,7 +7,7 @@ const About = () => {
     const stats = [
         { label: "CGPA", value: "8.5+", icon: <Zap className="text-industrial-warning" /> },
         { label: "Projects", value: "10+", icon: <Box className="text-industrial-accent" /> },
-        { label: "Experience", value: "Pre-Final", icon: <Anchor className="text-industrial-silver" /> },
+        { label: "Experience", value: "Final", icon: <Anchor className="text-industrial-silver" /> },
     ];
 
     return (
@@ -53,7 +53,7 @@ const About = () => {
                                     <Box size={30} className="md:size-[40px] text-industrial-accent animate-pulse" />
                                 </div>
                                 <h3 className="text-xl md:text-2xl font-bold text-white mb-2 uppercase tracking-widest font-technical">Module: Mahavishva S</h3>
-                                <p className="text-industrial-accent text-xs md:text-sm font-technical uppercase tracking-widest font-bold">Status: Online / Pre-final</p>
+                                <p className="text-industrial-accent text-xs md:text-sm font-technical uppercase tracking-widest font-bold">Status: Online / Final</p>
                             </div>
 
                             {/* Decorative corners */}

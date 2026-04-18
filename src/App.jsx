@@ -3,6 +3,8 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
+import Certificates from './components/Certificates'
+import Designs from './components/Designs'
 import Achievements from './components/Achievements'
 import Projects from './components/Projects'
 import Timeline from './components/Timeline'
@@ -18,6 +20,8 @@ function App() {
         <About />
         <Skills />
         <Timeline />
+        <Certificates />
+        <Designs />
         <Achievements />
         <Projects />
         <Contact />

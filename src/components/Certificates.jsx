@@ -11,22 +11,22 @@ const getFileUrl = (path) => {
     return `${baseUrl}${encodeURI(cleanPath)}`;
 };
 
-const Achievements = () => {
+const Certificates = () => {
     return (
-        <section id="achievements" className="py-24 bg-industrial-gray relative overflow-hidden">
+        <section id="certificates" className="py-24 bg-industrial-gray relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-industrial-accent/50 to-transparent"></div>
 
             <div className="container mx-auto px-6">
                 <div className="text-center mb-20">
                     <h2 className="text-4xl font-bold text-white mb-4 uppercase tracking-[0.3em]">
-                        Honor <span className="text-industrial-accent">Roll</span>
+                        Certifi<span className="text-industrial-accent">cations</span>
                     </h2>
                     <div className="w-24 h-1 bg-industrial-accent mx-auto"></div>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
-                    {portfolioData.achievements.map((item, index) => (
+                    {portfolioData.certificates.map((item, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, scale: 0.9 }}
@@ -112,9 +112,25 @@ const Achievements = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Industrial watermark link to Drive mentioned by user */}
+                <div className="mt-20 p-6 md:p-8 border border-industrial-accent/20 bg-industrial-accent/5 rounded-sm text-center">
+                    <p className="text-industrial-silver font-technical text-[10px] md:text-xs uppercase tracking-[0.2em] mb-4 px-4">
+                        Data Synchronized with Master Repository
+                    </p>
+                    <a
+                        href="https://drive.google.com/drive/folders/1esXzRqO23MPourATKbBQH_LoISoDaUXX"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 text-industrial-accent hover:text-white transition-colors font-bold uppercase tracking-[0.3em] text-[9px] md:text-[10px]"
+                    >
+                        <ShieldCheck size={16} />
+                        Access Full Credentials Vault
+                    </a>
+                </div>
             </div>
         </section>
     );
 };
 
-export default Achievements;
+export default Certificates;

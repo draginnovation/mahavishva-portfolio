@@ -36,7 +36,7 @@ const Hero = () => {
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-industrial-accent/30 bg-industrial-accent/10 text-industrial-accent mb-6 text-sm font-technical uppercase tracking-widest">
                         <Cpu size={16} />
-                        <span>Pre-Final Year Mechanical Student</span>
+                        <span>Final Year Mechanical Student</span>
                     </div>
 
                     <h1 className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-3xl sm:text-6xl md:text-8xl font-bold mb-6 text-white tracking-tighter px-2">

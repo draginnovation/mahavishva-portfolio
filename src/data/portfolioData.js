@@ -2,7 +2,7 @@ export const portfolioData = {
     name: "Mahavishva S",
     role: "Mechanical Engineering Student",
     specialization: "Robotics & Automation | Thermal Engineering",
-    about: "I am a pre-final year Mechanical Engineering student with a passion for industrial design, robotics, and thermal systems. I focus on creating efficient, reliable, and innovative mechanical solutions for modern challenges.",
+    about: "I am a final year Mechanical Engineering student with a passion for industrial design, robotics, and thermal systems. I focus on creating efficient, reliable, and innovative mechanical solutions for modern challenges.",
 
     skills: [
         { name: "AutoCAD / SolidWorks", level: 90, category: "Design" },
@@ -74,15 +74,7 @@ export const portfolioData = {
         }
     ],
 
-    achievements: [
-        {
-            title: "Hydraulic Scissor Lift Design",
-            organization: "Academic Project",
-            date: "2024",
-            description: "Detailed design and analysis of a hydraulic scissor lift mechanism.",
-            file: "/certificates/Hydraulic_Scissor_Lift.pdf",
-            type: "pdf"
-        },
+    certificates: [
         {
             title: "Certified in Metal Additive Manufacturing",
             organization: "NPTEL",
@@ -154,13 +146,115 @@ export const portfolioData = {
             description: "Advanced microcontroller programming seminar.",
             file: "/certificates/1-b5f80d09-2e30-485e-bd8b-65fdb2ef33ec.pdf",
             type: "pdf"
+        }
+    ],
+
+    designs: [
+        {
+            title: "Hydraulic Scissor Lift Design",
+            organization: "Academic Project",
+            date: "2024",
+            description: "Detailed design and analysis of a hydraulic scissor lift mechanism.",
+            file: "/certificates/Hydraulic_Scissor_Lift.pdf",
+            type: "pdf"
         },
+        {
+            title: "Knuckle Joint Design",
+            organization: "CAD Modeling",
+            date: "2024",
+            description: "Detailed mechanical design of a Knuckle Joint.",
+            file: "/designs/kNCKLE jOINT.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Flywheel Full Assembly",
+            organization: "CAD Modeling",
+            date: "2024",
+            description: "Complete assembly design of a Flywheel mechanism.",
+            file: "/designs/FLYWHEEL FULL ASSEMBLY.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Flange Coupling",
+            organization: "CAD Modeling",
+            date: "2024",
+            description: "Structural design of a Flange Coupling.",
+            file: "/designs/FLANGE COUPLING.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Machine Vice",
+            organization: "CAD Modeling",
+            date: "2024",
+            description: "Design of a precision Machine Vice.",
+            file: "/designs/MACHINE VICE.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Stuffing Box",
+            organization: "CAD Modeling",
+            date: "2024",
+            description: "Sealing component design for a Stuffing Box.",
+            file: "/designs/stuffing box.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Universal Joint",
+            organization: "CAD Modeling",
+            date: "2024",
+            description: "Mechanical modeling of a Universal Joint.",
+            file: "/designs/UNIVERSAL JOINT.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Plummer Block",
+            organization: "CAD Modeling",
+            date: "2024",
+            description: "Design of a Plummer Block bearing housing.",
+            file: "/designs/PLUMMER BLOCK.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Baseplate DWG",
+            organization: "CAD Modeling",
+            date: "2024",
+            description: "Drafting of a functional Baseplate.",
+            file: "/designs/smaha_BASEPLATE _dwg1.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Lathe Tailstock",
+            organization: "CAD Modeling",
+            date: "2024",
+            description: "Assembly design for a Lathe Tailstock.",
+            file: "/designs/LATHE TAILSTOCK.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Screw Jack",
+            organization: "CAD Modeling",
+            date: "2024",
+            description: "Mechanical lifting design for a Screw Jack.",
+            file: "/designs/SCREW JACK.pdf",
+            type: "pdf"
+        },
+        {
+            title: "Flange Coupling Alternative",
+            organization: "CAD Modeling",
+            date: "2024",
+            description: "Alternative design iteration of Flange Coupling.",
+            file: "/designs/FLANGE COUPLING (1).pdf",
+            type: "pdf"
+        }
+    ],
+
+    achievements: [
         {
             title: "Achievement Certificate 6",
             organization: "University Competition",
             date: "2024",
             description: "Recognized for outstanding technical project presentation.",
-            file: "/certificates/Achievement_6.jpeg",
+            file: "/achievements/Achievement_6.jpeg",
             type: "image"
         },
         {
@@ -168,7 +262,7 @@ export const portfolioData = {
             organization: "Engineering Symposium",
             date: "2024",
             description: "Awarded for excellence in academic projects.",
-            file: "/certificates/c2.jpeg",
+            file: "/achievements/c2.jpeg",
             type: "image"
         },
         {
@@ -176,7 +270,7 @@ export const portfolioData = {
             organization: "Tech Event Series",
             date: "2024",
             description: "Participation in series of technical events and seminars.",
-            file: "/certificates/c3.jpeg",
+            file: "/achievements/c3.jpeg",
             type: "image"
         },
         {
@@ -184,7 +278,7 @@ export const portfolioData = {
             organization: "Design Challenge",
             date: "2024",
             description: "Competed in mechanical component design challenge.",
-            file: "/certificates/c4.jpeg",
+            file: "/achievements/c4.jpeg",
             type: "image"
         },
         {
@@ -192,7 +286,7 @@ export const portfolioData = {
             organization: "Inter-college Fest",
             date: "2024",
             description: "Participated in inter-college innovation fest.",
-            file: "/certificates/c5.jpeg",
+            file: "/achievements/c5.jpeg",
             type: "image"
         },
         {
@@ -200,7 +294,7 @@ export const portfolioData = {
             organization: "Innovation Expo",
             date: "2024",
             description: "Showcased prototype at regional innovation expo.",
-            file: "/certificates/c6.jpeg",
+            file: "/achievements/c6.jpeg",
             type: "image"
         },
         {
@@ -208,7 +302,7 @@ export const portfolioData = {
             organization: "Technical Symposium",
             date: "2024",
             description: "Received participation certificate in technical symposium.",
-            file: "/certificates/c7.jpeg",
+            file: "/achievements/c7.jpeg",
             type: "image"
         }
     ]

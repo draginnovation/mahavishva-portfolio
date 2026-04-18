@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const poppler = require('pdf-poppler');
 
-const dir = path.join(__dirname, 'public', 'certificates');
+const dir = path.join(__dirname, 'public', 'designs');
 
 async function convertPdfs() {
     const files = fs.readdirSync(dir);
